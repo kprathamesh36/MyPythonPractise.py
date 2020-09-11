@@ -1,19 +1,22 @@
-n = int(input("Enter number of families"))
-p = []
-j = []
-for i in range(0, n):
-    ele = int(input("Enter the income of each family"))
-    p.append(ele)
-for i in range(0, n):
-    e = int(input("Enter the number of childrens for each family"))
-    j.append(e)
-b = 0
-count = 0
-for m in p:
-    for n in j:
-        if n > 2:
-            b = b + m
-            count = count + 1
+attack = 0
+defense = 0
+hp = 0
+while True:
+    attack = int(input("Enter attack between 1-15:"))
+    if 1 <= int(attack) <= 15:
+        break
+    print("Error Invalid Input")
+while True:
+    defense = int(input("Enter defense between 1-15:"))
+    if 1 <= int(defense) <= 15:
+        break
+    print("Error Invalid Input")
+while True:
+    hp = int(input("Enter hp between 1-15:"))
+    if 1 <= int(hp) <= 15:
+        break
+    print("Error Invalid Input")
 
-b = b / count
-print(b)
+count = attack + defense + hp
+ivcalc = round((count * 100) / 45)
+print(ivcalc)
